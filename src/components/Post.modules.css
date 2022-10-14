@@ -1,3 +1,12 @@
 .post{
+    background: var(--gray-800);
+    border-radius: 8px;
+    padding: 2.5rem;
+}
+
+.post + .post {       /* faz com que esses atributos só sejam aplicados para posts que tenham outro post acima */
+
+}
+.author{
 
 }
