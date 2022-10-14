@@ -9,6 +9,7 @@ export function Sidebar() {
             />
             
             <div  className={styles.profile}>
+                <img src="https://instagram.fsdu25-1.fna.fbcdn.net/v/t51.2885-19/102435663_3005328039557092_7825619572261650432_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fsdu25-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=eo00N1wunhMAX_HEtLG&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_QCdd1PKM3YTmrEFHqL8oxACgD7OErWYvB6JgvDRv0Vg&oe=634FFBCE&_nc_sid=8fd12b" alt="" />
                 <strong> Diego Fernandes</strong>
                 <span>Web Developer</span>
             </div>

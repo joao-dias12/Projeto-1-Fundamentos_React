@@ -1,3 +1,4 @@
+/* ESse Arquivo é para setar o estilo de todos os elementos da aplicação  */
 :root {
     --white: #ffffff;
     --gray-100:#e1e1e6;
@@ -15,17 +16,17 @@
 * {
     margin:0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Padding marging não vao aumentar e sim vao expremer os elementos para dentro   */
 }
 
 body {
     background: var(--gray-900);
     color: var(--gray-300);
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased; /* em navegadores como chrome, faz com que as fontes sejam mais detalhadas com fontes não padrão */
 }
 
 body, input, textarea, button {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1rem; /* 1 rem equivale a 16px no tamanho padrão do chrome, e ai as fontes vão diminuir relativamente*/
 }
