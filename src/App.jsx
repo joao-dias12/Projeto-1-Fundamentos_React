@@ -1,6 +1,6 @@
 // JSX = JavaScrip + XML
 import { Header } from './components/header';
-import { Post }  from './Post';
+import { Post }  from './components/Post';
 import { Sidebar } from './components/Sidebar';
 
 import './global.css'
