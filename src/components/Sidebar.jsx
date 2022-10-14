@@ -1,3 +1,4 @@
+import { PencilLine } from "phosphor-react";
 import styles from './Sidebar.module.css'
 
 export function Sidebar() {
@@ -9,14 +10,15 @@ export function Sidebar() {
             />
             
             <div  className={styles.profile}>
-                <img src="https://instagram.fsdu25-1.fna.fbcdn.net/v/t51.2885-19/102435663_3005328039557092_7825619572261650432_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fsdu25-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=eo00N1wunhMAX_HEtLG&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_QCdd1PKM3YTmrEFHqL8oxACgD7OErWYvB6JgvDRv0Vg&oe=634FFBCE&_nc_sid=8fd12b" alt="" />
+                <img className={styles.avatar} src="https://media-exp1.licdn.com/dms/image/C4D03AQG0V_M9h40K0A/profile-displayphoto-shrink_800_800/0/1647860850052?e=1671062400&v=beta&t=ZmeCM9T4Z3PZWnvp18Ph7YVqKFN1bYMvRvSdU-vsh-0" />
                 <strong> Diego Fernandes</strong>
                 <span>Web Developer</span>
             </div>
 
             <footer>
                 <a href="#">
-                    EDITAR O SEU PERFIL
+                    <PencilLine size={20}/>
+                    Editar seu perfil
                 </a>
             </footer>
         </aside>
