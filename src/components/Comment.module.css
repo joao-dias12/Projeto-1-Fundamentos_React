@@ -4,13 +4,6 @@
     gap: 1rem;
 }
 
-.comment > img {
-    box-sizing: initial; /* faz com que quando voce adiciona bordar , padding, faz com que a imagem dentro mantenha seu tamanho origial, e o resto cresce para fora(padding , outline , etc */
-    width: 3rem;
-    height: 3rem;
-    border-radius: 8px;
-}
-
 .commentBox{
     flex: 1;
 }
