@@ -1,13 +1,13 @@
 import styles from './Avatar.module.css'
 
 
-export function Avatar(props){
+export function Avatar({hasBorder = true, src }){ // Nesse caso estamos definindo valores default tambem
 
     const hasBorder = props.hasBorder !=false;
     return (
         <img 
         className={ hasBorder ? styles.avatarWithBorder : styles.avatar} // se props.hasBorder for true, faça isso(styles.avatarWithBorder) se falso, faça aquilo(styles.avatar) 
-        src={props.src} 
+        src={src} 
         />
     )
 }
