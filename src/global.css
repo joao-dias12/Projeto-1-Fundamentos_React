@@ -14,6 +14,11 @@
 
 }
 
+:focus {
+    outline: transparent; /* Mudando o a cor de fora do de foco para transparente*/
+    box-sizing:0 0 0 2px var(--green-500); /* Mudando a cor para do focus para green  */
+}
+
 * {
     margin:0;
     padding: 0;

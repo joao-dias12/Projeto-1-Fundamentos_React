@@ -104,4 +104,10 @@ margin-top: 2rem;
     background: var(--green-500) ;
     color: var(--white);
     cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+.commentForm button[type=submit]:hover{
+    background: var(--green-300)
 }
