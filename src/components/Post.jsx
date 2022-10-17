@@ -4,8 +4,14 @@ import { Avatar } from "./Avatar"
 
 
 export function Post({author, publishedAt}) {
-
-    console.log(props)
+   const publishedDateFormatted = new Intl.DateTimeFormat('pt-BR', {
+        day: '2-digit',
+       month: 'long',
+       hour: '2-digit',
+       minute:'2-digit',
+       
+    }).format(publishedAt) 
+    
     return (
         <article className={styles.post}> 
             <header>
@@ -19,8 +25,8 @@ export function Post({author, publishedAt}) {
                     </div>
                 </div>
 
-                <time title="14 de outubro de 2022" dateTime="14/10/2022 as 13h"> Publicado há 1h
-                {publishedAt}
+                <time title="14 de outubro de 2022" dateTime="14/10/2022 as 13h">
+                {publishedDateFormatted}
                 </time>
             </header>
 
