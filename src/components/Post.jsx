@@ -3,15 +3,19 @@ import styles from "./Post.module.css"
 import { Avatar } from "./Avatar"
 
 
-export function Post() {
+export function Post(props) {
+
+    console.log(props)
     return (
         <article className={styles.post}> 
             <header>
                 <div className={styles.author}>
-                    <Avatar src="https://media-exp1.licdn.com/dms/image/C4D03AQG0V_M9h40K0A/profile-displayphoto-shrink_800_800/0/1647860850052?e=1671062400&v=beta&t=ZmeCM9T4Z3PZWnvp18Ph7YVqKFN1bYMvRvSdU-vsh-0"  />
+                    <Avatar src={props.author.avatarUrl}  /> {/* Colocando os atributos do objeto "props" na interface */}
+                    
+
                     <div className={styles.authorInfo}>
-                        <strong>João Dias</strong>
-                        <span>Web Developer</span>
+                        <strong>{props.author.name}</strong>
+                        <span>{props.author.role}</span>
                     </div>
                 </div>
 
