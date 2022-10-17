@@ -8,3 +8,17 @@
     gap: 2rem;
     align-items: flex-start; /* alinhados sempre para o topo, o padrão é o strecht que acabaria estragando a imagem*/
 }
+
+@media (max-width: 768px) { /* quando a tela for menor que 768 px*/
+    html {
+        font-size: 87.5%;
+    }
+
+}
+
+@media (max-width: 768px) { /* quando a tela for menor que 768 px*/
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+
+}
