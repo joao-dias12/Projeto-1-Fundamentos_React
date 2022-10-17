@@ -3,23 +3,25 @@ import styles from "./Post.module.css"
 import { Avatar } from "./Avatar"
 
 
-export function Post(props) {
+export function Post({author, publishedAt}) {
 
     console.log(props)
     return (
         <article className={styles.post}> 
             <header>
                 <div className={styles.author}>
-                    <Avatar src={props.author.avatarUrl}  /> {/* Colocando os atributos do objeto "props" na interface */}
+                    <Avatar src={author.avatarUrl}  /> {/* Colocando os atributos do objeto "props" na interface */}
                     
 
                     <div className={styles.authorInfo}>
-                        <strong>{props.author.name}</strong>
-                        <span>{props.author.role}</span>
+                        <strong>{author.name}</strong>
+                        <span>{author.role}</span>
                     </div>
                 </div>
 
-                <time title="14 de outubro de 2022" dateTime="14/10/2022 as 13h"> Publicado há 1h</time>
+                <time title="14 de outubro de 2022" dateTime="14/10/2022 as 13h"> Publicado há 1h
+                {publishedAt}
+                </time>
             </header>
 
         <div className={styles.content}>
