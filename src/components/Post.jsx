@@ -35,8 +35,13 @@ export function Post({author, publishedAt, content}) {
         }
 
     function handleNewCommentChange(){
+        event.target.setCustomValidity('') // Avisando que não tem mais erro
         setnewCommentText(event.target.value); //pegando os dados digitados e colocando no comentario
 
+    }
+
+    function handleNewCommentInvalid(){
+       event.target.setCustomValidity('Esse campo é obrigatório')
     }
 
     function deleteComment(commentToDelete){
@@ -85,7 +90,10 @@ export function Post({author, publishedAt, content}) {
             name="comment" 
             placeholder="Deixe o seu comentario"
             value={newCommentText}
-            onChange={handleNewCommentChange} /> {/*monitorando novos conteudos inseridos na text area*/}
+            onChange={handleNewCommentChange}
+            onInvalid={handleNewCommentInvalid}
+            required /> {/*monitorando novos conteudos inseridos na text area*/}
+            
 
             <footer>
                 <button type="submit">Publicar</button>
