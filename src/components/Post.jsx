@@ -55,6 +55,8 @@ export function Post({author, publishedAt, content}) {
 
     }
 
+    const isNewCommentEmpty = newCommentText.length == 0 // Boas praticas de código deixando o clean code
+
     return (
         <article className={styles.post}> 
             <header>
@@ -96,7 +98,7 @@ export function Post({author, publishedAt, content}) {
             
 
             <footer>
-                <button disabled={newCommentText.length == 0} type="submit">
+                <button disabled={isNewCommentEmpty} type="submit">
                     Publicar
                 </button>
             </footer>
