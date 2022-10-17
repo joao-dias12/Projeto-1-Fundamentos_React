@@ -6,7 +6,7 @@ import styles from "./Post.module.css"
 import { Avatar } from "./Avatar"
 
 
-export function Post({author, publishedAt}) {
+export function Post({author, publishedAt, content}) {
    const publishedDateFormatted = format( publishedAt,"d 'de' LLLL 'as' HH:mm'h' ", {locale: ptBR}) 
    // Essa data foi formatada utilizando a documentação da biblioteca date-fns
 
@@ -35,7 +35,13 @@ export function Post({author, publishedAt}) {
             </header>
 
         <div className={styles.content}>
-           
+           {content.map(line =>{
+            if (line.type == 'paragraph') {
+                return <p>{line.content}</p>;
+            } else if (line.type == 'link'){
+                return <p><a href='#'>{line.content}</a></p>;
+            }
+           })}
         </div>
         
         <form className={styles.commentForm}>

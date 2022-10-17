@@ -20,7 +20,7 @@ const posts = [
       role: 'Full Stack Junior'
     },
     content: [
-      {type: 'paragraph', content: '<p>Fala galeraa 👋'},
+      {type: 'paragraph', content: 'Fala galeraa 👋'},
       {type: 'paragraph', content : 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
       {type: 'paragraph', content: 'jane.design/doctorcare'}
     ],
@@ -35,7 +35,7 @@ const posts = [
       role: 'Engenheira Ambiental'
     },
     content: [
-      {type: 'paragraph', content: '<p>Fala galeraa 👋'},
+      {type: 'paragraph', content: 'Fala galeraa 👋'},
       {type: 'paragraph', content : 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
       {type: 'paragraph', content: 'jane.design/doctorcare'}
     ],
