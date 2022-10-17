@@ -13,8 +13,7 @@ import { useState } from 'react'
 
 export function Post({author, publishedAt, content}) {
    const [comments, setComments] = useState([ 
-    1,
-    2,
+    'Post muito bacana hein'
     ])
 
     // comments é a variavel, e setcoments é a função que vai alterar a variavel e avisar ao react
@@ -28,12 +27,16 @@ export function Post({author, publishedAt, content}) {
     addSuffix: true
 })
 
-function handleCreateNewComment (){
-    event.preventDefault() //Função que retira a necessidade de ser redirecionado para outra pagina
+    function handleCreateNewComment (){
+        event.preventDefault() //Função que retira a necessidade de ser redirecionado para outra pagina
 
-    setComments([...comments, comments.length +1]) // "...coments" copia os valores da variavel "comments" naquele momento
-    
-}
+        const newCommentText = event.target.comment.value // tem um evento, que é o "submit", esse evento tem um target. esse target é o formulario. o formulario tem dentro dele uma textarea com o atributo "name" = comment. então eu quero pegar o value que foi inserido dentro dessa text area
+
+        console.log()
+
+        setComments([...comments, newCommentText]) // "...coments" copia os valores da variavel "comments" naquele momento
+        event.target.comment.value = ''; // Deixando a caixa de comentario vazia depois
+    }
     return (
         <article className={styles.post}> 
             <header>
@@ -65,7 +68,7 @@ function handleCreateNewComment (){
         <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
             <strong>Deixe o seu feedback</strong>
 
-            <textarea placeholder="Deixe o seu comentario" />
+            <textarea name="comment" placeholder="Deixe o seu comentario" />
 
             <footer>
                 <button type="submit">Publicar</button>
@@ -74,7 +77,7 @@ function handleCreateNewComment (){
 
         <div className={styles.commentList}>
             {comments.map(comment =>{
-                return <Comment/>
+                return <Comment content={comment}/>
             })}
 
         </div>
