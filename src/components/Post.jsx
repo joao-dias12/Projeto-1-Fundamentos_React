@@ -31,7 +31,7 @@ export function Post({author, publishedAt, content}) {
 function handleCreateNewComment (){
     event.preventDefault() //Função que retira a necessidade de ser redirecionado para outra pagina
 
-    setComments([1, 2, 3])
+    setComments([...comments, comments.length +1]) // "...coments" copia os valores da variavel "comments" naquele momento
     
 }
     return (
