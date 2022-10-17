@@ -5,7 +5,7 @@ import styles from './Comment.module.css'
 export function Comment(props){
     function handleDeleteComment(){
         
-        props.deleteComment(props.content)
+        props.onDeleteComment(props.content)
     }
     return (
         <div className={styles.comment}>
