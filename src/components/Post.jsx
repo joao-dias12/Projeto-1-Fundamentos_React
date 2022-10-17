@@ -5,16 +5,22 @@ import { Comment } from "./Comment"
 import { Avatar } from "./Avatar"
 
 import styles from "./Post.module.css"
+import { useState } from 'react'
 
-const comments = [
-    1,
-    2,
-    
-];
 
+
+// estado = variaveis que eu quero que o componente monitore. useState é o que monitora
 
 export function Post({author, publishedAt, content}) {
-   const publishedDateFormatted = format( publishedAt,"d 'de' LLLL 'as' HH:mm'h' ", {locale: ptBR}) 
+   const [comments, setComments] = useState([ 
+    1,
+    2,
+    ])
+
+    // comments é a variavel, e setcoments é a função que vai alterar a variavel e avisar ao react
+   
+   
+    const publishedDateFormatted = format( publishedAt,"d 'de' LLLL 'as' HH:mm'h' ", {locale: ptBR}) 
    // Essa data foi formatada utilizando a documentação da biblioteca date-fns
 
    const publishedDateRelativeToNow = formatDistanceToNow(publishedAt, 
@@ -23,11 +29,11 @@ export function Post({author, publishedAt, content}) {
 })
 
 function handleCreateNewComment (){
-    event.preventDefault()
+    event.preventDefault() //Função que retira a necessidade de ser redirecionado para outra pagina
 
-    console.log('oi')
-}
+    setComments([1, 2, 3])
     
+}
     return (
         <article className={styles.post}> 
             <header>
