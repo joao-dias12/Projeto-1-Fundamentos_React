@@ -10,13 +10,17 @@ export function Comment(props){
     }
     
     function handleLikeComment(){
-        setLikeCount(LikeCount+1) // essa função vai adicionar 1 toda vez que ela for acionada ao likecount
+        setLikeCount((state)=>{
+            return state +1
+        })  
+            // essa função vai adicionar 1 toda vez que ela for acionada ao likecounte nesse novo modelo , é o mais adequado para mudar valores que dependendem do valor dele
     }
     
     function handleDeleteComment(){
         
         props.onDeleteComment(props.content)
     }
+
 
 
     return (
