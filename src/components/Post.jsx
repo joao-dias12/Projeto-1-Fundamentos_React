@@ -2,8 +2,15 @@ import { format, formatDistanceToNow } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 
 import { Comment } from "./Comment"
-import styles from "./Post.module.css"
 import { Avatar } from "./Avatar"
+
+import styles from "./Post.module.css"
+
+const comments = [
+    1,
+    2,
+    
+];
 
 
 export function Post({author, publishedAt, content}) {
@@ -15,6 +22,11 @@ export function Post({author, publishedAt, content}) {
     addSuffix: true
 })
 
+function handleCreateNewComment (){
+    event.preventDefault()
+
+    console.log('oi')
+}
     
     return (
         <article className={styles.post}> 
@@ -44,7 +56,7 @@ export function Post({author, publishedAt, content}) {
            })}
         </div>
         
-        <form className={styles.commentForm}>
+        <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
             <strong>Deixe o seu feedback</strong>
 
             <textarea placeholder="Deixe o seu comentario" />
@@ -55,9 +67,9 @@ export function Post({author, publishedAt, content}) {
         </form>
 
         <div className={styles.commentList}>
-            <Comment/>
-            <Comment/>
-            <Comment/>
+            {comments.map(comment =>{
+                return <Comment/>
+            })}
 
         </div>
         </article>
