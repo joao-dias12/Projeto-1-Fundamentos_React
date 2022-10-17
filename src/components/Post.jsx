@@ -96,7 +96,9 @@ export function Post({author, publishedAt, content}) {
             
 
             <footer>
-                <button type="submit">Publicar</button>
+                <button disabled={newCommentText.length == 0} type="submit">
+                    Publicar
+                </button>
             </footer>
         </form>
 
